@@ -1,24 +1,37 @@
 import React from 'react';
 
 const Question = (props) => {
-	const [number, incrementNumber] = React.useState(1);
+	const { number, numberFunction } = props;
+
+	const [tic, setTic] = React.useState(0);
+	const [tac, setTac] = React.useState(0);
+	const [toe, setToe] = React.useState(0);
+
+	const ticFunction = (id) => {
+		switch (id) {
+			case tic:
+                setTic(tic + 1);
+                console.log(tic);
+                break;
+			case tac:
+                setTac(tac + 1);
+                break;
+			case toe:
+                setToe(toe + 1);
+                break;
+            default:
+                console.log("Problem with the switch case. :(");
+        }
+        if (number < 4) numberFunction(number + 1)
+	};
 
 	return (
 		<div>
 			<p>Question {number} of 4</p>
 			<h3>Question goes here</h3>
-            <button onClick={() => incrementNumber(number + 1)}>
-                Answer 1
-            </button>
-            <button onClick={() => incrementNumber(number + 1)}>
-                Answer 2
-            </button>
-            <button onClick={() => incrementNumber(number + 1)}>
-                Answer 3
-            </button>
-            <button onClick={() => incrementNumber(number + 1)}>
-                Answer 4
-            </button>
+			<button onClick={() => ticFunction(tic)}>Answer 1</button>
+			<button onClick={() => ticFunction(tac)}>Answer 2</button>
+			<button onClick={() => ticFunction(toe)}>Answer 3</button>
 		</div>
 	);
 };
