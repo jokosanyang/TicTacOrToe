@@ -4,8 +4,7 @@ import Result from './components/Result/Result';
 
 const App = () => {
 	const [started, setStart] = React.useState(null);
-    const [questionNumber, incrementNumber] = React.useState(1);
-
+	const [questionNumber, incrementNumber] = React.useState(1);
 
 	return (
 		<React.Fragment>
@@ -25,8 +24,8 @@ const App = () => {
 					</h2>
 					<button onClick={() => setStart(true)}>Start</button>
 				</div>
-            )}
-            {questionNumber > 4 ? <Result /> : null}
+			)}
+			{questionNumber > 4 ? <Result /> : null}
 		</React.Fragment>
 	);
 };
