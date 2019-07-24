@@ -5,8 +5,9 @@ import Question from './Question';
 
 afterEach(cleanup);
 
-test('clicking first button increments tic variable', () => {
+test('clicking an answer increments question number', () => {
 	const { getByText } = render(<Question />);
-	const Button1 = getByText(/Answer 1/);
-	fireEvent.click(Button1);
+	const Button2 = getByText(/SAME/);
+	fireEvent.click(Button2);
+    getByText('Question 2');
 });

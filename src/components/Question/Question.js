@@ -38,6 +38,7 @@ const Question = (props) => {
 			default:
 				console.log('Problem with the switch case. :(');
 		}
+        console.log(tictactoe);
 		if (number < 4) {
 			numberFunction(number + 1);
 			setQuestion(questions[number]);
