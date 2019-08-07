@@ -10,9 +10,9 @@ test("App renders in the Dom", () => {
     ReactDOM.unmountComponentAtNode(div);
 });
 
-test('clicking first answer increments tic variable', () => {
-	const { getByText } = render(<Question number={1} numberFunction={(number)=> number+1 }/>);
-	const Button1 = getByText(/dayummm/);
-	fireEvent.click(Button1);
+// test('clicking first answer increments tic variable', () => {
+// 	const { getByText } = render(<Question number={1} numberFunction={(number)=> number+1 }/>);
+// 	const Button1 = getByText(/dayummm/);
+// 	fireEvent.click(Button1);
     
-});
+// });
