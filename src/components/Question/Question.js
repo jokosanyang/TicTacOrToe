@@ -1,11 +1,16 @@
 import React from 'react';
 
 const Question = (props) => {
-	const { number, numberFunction } = props;
-
-	const [tic, setTic] = React.useState(0);
-	const [tac, setTac] = React.useState(0);
-	const [toe, setToe] = React.useState(0);
+	const {
+		number,
+		numberFunction,
+		tic,
+		tac,
+		toe,
+		setTic,
+		setTac,
+		setToe
+	} = props;
 	const tictactoe = [tic, tac, toe];
 
 	const questions = [
@@ -38,9 +43,10 @@ const Question = (props) => {
 			default:
 				console.log('Problem with the switch case. :(');
 		}
-        console.log(tictactoe);
-		if (number < 4) {
+		if (number <= 4) {
 			numberFunction(number + 1);
+		}
+		if (number < 4) {
 			setQuestion(questions[number]);
 			setAnswer(answers[number]);
 		}
