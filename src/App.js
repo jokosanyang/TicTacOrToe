@@ -10,7 +10,7 @@ const App = () => {
 				<h1>TIC, TAC, TOE</h1>
 			</header>
 			{started ? (
-				<Quiz/>
+				<Quiz />
 			) : (
 				<section>
 					<h2>

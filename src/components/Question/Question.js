@@ -1,7 +1,16 @@
 import React from 'react';
 
 const Question = (props) => {
-	const { number, numberFunction, tic, tac, toe, setTic, setTac, setToe} = props;
+	const {
+		number,
+		numberFunction,
+		tic,
+		tac,
+		toe,
+		setTic,
+		setTac,
+		setToe
+	} = props;
 	const tictactoe = [tic, tac, toe];
 
 	const questions = [
