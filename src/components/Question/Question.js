@@ -1,4 +1,5 @@
 import React from 'react';
+import * as S from '../../App.style';
 
 const Question = (props) => {
 	const {
@@ -58,9 +59,9 @@ const Question = (props) => {
 			<h3>{question}</h3>
 			{answer.map((option, t) => {
 				return (
-					<button key={t} onClick={() => ticFunction(tictactoe[t])}>
+					<S.Answer key={t} onClick={() => ticFunction(tictactoe[t])}>
 						{option}
-					</button>
+					</S.Answer>
 				);
 			})}
 		</div>

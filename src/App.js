@@ -1,16 +1,19 @@
 import React from 'react';
 import Quiz from './components/Quiz';
+import GlobalStyle from './globalStyle';
+import * as S from './App.style';
 
 const App = () => {
 	const [started, setStart] = React.useState(null);
 
 	return (
 		<React.Fragment>
+			<GlobalStyle/>
 			<header>
 				<h1>TIC, TAC, TOE</h1>
 			</header>
 			{started ? (
-				<Quiz />
+				<Quiz setStart={setStart}/>
 			) : (
 				<section>
 					<h2>
@@ -20,7 +23,7 @@ const App = () => {
 						Answer four quick questions and find out once and for all, if you're
 						a tic, a tac, or a toe.
 					</h2>
-					<button onClick={() => setStart(true)}>Start</button>
+					<S.Button onClick={() => setStart(true)}>Start</S.Button>
 				</section>
 			)}
 		</React.Fragment>

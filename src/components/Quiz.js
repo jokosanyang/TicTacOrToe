@@ -11,7 +11,7 @@ const Quiz = (props) => {
 	return (
 		<React.Fragment>
 			{questionNumber > 4 ? (
-				<Result tic={tic} tac={tac} toe={toe} />
+				<Result setStart={props.setStart} tic={tic} tac={tac} toe={toe} />
 			) : (
 				<Question
 					number={questionNumber}
