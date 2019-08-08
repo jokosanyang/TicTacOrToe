@@ -18,9 +18,11 @@ const Result = (props) => {
 		const results = ['TIC', 'TAC', 'TOE']
 		return results[maxIndex];
 	};
+
 	return (
 		<section>
 			<h2>Wow! You're a {getResult(tictactoe)}!</h2>
+			<img src={`${getResult(tictactoe)}.jpg`} alt=""></img>
 		</section>
 	);
 };
