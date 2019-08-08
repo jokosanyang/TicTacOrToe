@@ -23,7 +23,7 @@ const Result = (props) => {
 	return (
 		<section>
 			<h2>Wow! You're a {getResult(tictactoe)}!</h2>
-			<img src={`${getResult(tictactoe)}.jpg`} alt=""></img>
+			<img src={`${getResult(tictactoe)}.jpg`} alt=""/>
 			<S.Button onClick={()=>setStart(false)}>Start again</S.Button>
 		</section>
 	);
