@@ -1,7 +1,8 @@
 import React from 'react';
+import * as S from '../../App.style';
 
 const Result = (props) => {
-	const { tic, tac, toe } = props;
+	const { tic, tac, toe, setStart } = props;
 	const tictactoe = [tic, tac, toe];
 	console.log(tictactoe);
 
@@ -21,6 +22,7 @@ const Result = (props) => {
 	return (
 		<section>
 			<h2>Wow! You're a {getResult(tictactoe)}!</h2>
+			<S.Button onClick={()=>setStart(false)}>Start again</S.Button>
 		</section>
 	);
 };
