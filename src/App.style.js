@@ -39,13 +39,13 @@ const Button = styled.button`
 `;
 
 const Image = styled.img`
-    width: 50%;
-    height: 50%;
-`
+	width: 35%;
+	height: 35%;
+`;
 
 const Container = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-`
+`;
 export { Answer, Button, Image, Container };
