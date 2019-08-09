@@ -10,6 +10,13 @@ const globalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Playfair Display', serif;
     }
+
+    @media (min-width: 768px) {
+        body {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
 `;
 
 export default globalStyle;
