@@ -38,4 +38,14 @@ const Button = styled.button`
 	padding: 1rem 2rem;
 `;
 
-export { Answer, Button };
+const Image = styled.img`
+    width: 50%;
+    height: 50%;
+`
+
+const Container = styled.section`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`
+export { Answer, Button, Image, Container };
