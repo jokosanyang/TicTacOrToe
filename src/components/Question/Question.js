@@ -12,7 +12,7 @@ const Question = (props) => {
 		setTac,
 		setToe
 	} = props;
-	const tictactoe = [tic, tac, toe];
+	const tictactoe = ['tic', 'tac', 'toe'];
 
 	const questions = [
 		'When you see a meme you agree with, you exclaim:',
@@ -32,13 +32,13 @@ const Question = (props) => {
 
 	const ticFunction = (id) => {
 		switch (id) {
-			case tic:
+			case 'tic':
 				setTic(tic + 1);
 				break;
-			case tac:
+			case 'tac':
 				setTac(tac + 1);
 				break;
-			case toe:
+			case 'toe':
 				setToe(toe + 1);
 				break;
 			default:
@@ -59,7 +59,9 @@ const Question = (props) => {
 			<h3>{question}</h3>
 			{answer.map((option, t) => {
 				return (
-					<S.Answer key={t} onClick={() => ticFunction(tictactoe[t])}>
+					<S.Answer key={t} onClick={() => {
+						console.log(tictactoe[t]);
+						return ticFunction(tictactoe[t])}}>
 						{option}
 					</S.Answer>
 				);
