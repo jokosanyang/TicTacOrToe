@@ -1,4 +1,5 @@
 import React from 'react';
+import Favicon from 'react-favicon';
 import Quiz from './components/Quiz';
 import GlobalStyle from './globalStyle';
 import * as S from './App.style';
@@ -8,12 +9,13 @@ const App = () => {
 
 	return (
 		<React.Fragment>
-			<GlobalStyle/>
+			<GlobalStyle />
+			<Favicon url="https://user-images.githubusercontent.com/43584074/62894747-45072500-bd45-11e9-87f4-c2754848570c.jpg" />
 			<header>
 				<h1>TIC, TAC, TOE</h1>
 			</header>
 			{started ? (
-				<Quiz setStart={setStart}/>
+				<Quiz setStart={setStart} />
 			) : (
 				<section>
 					<h2>

@@ -32,8 +32,10 @@
     "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
+    "re": "^0.1.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-favicon": "0.0.16",
     "styled-components": "^4.3.2"
   }
 }
